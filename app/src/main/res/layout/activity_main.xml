@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textAlignment="center"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_tide_tim1"
+        android:layout_width="80dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:text="1st tide time"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_tide_label1"
+        app:layout_constraintStart_toEndOf="@+id/tv_tide_label1"
+        app:layout_constraintTop_toTopOf="@+id/tv_tide_label1" />
+
+    <Button
+        android:id="@+id/btn_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="600dp"
+        android:text="Settings"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_graph"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Graph "
+        app:layout_constraintStart_toEndOf="@+id/btn_settings"
+        app:layout_constraintTop_toTopOf="@+id/btn_settings" />
+
+    <Button
+        android:id="@+id/btn_refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Refresh"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/tv_tide_label1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        android:text=" tide 1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_choose_days" />
+
+    <TextView
+        android:id="@+id/tv_tide_label2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text=" tide 2"
+        app:layout_constraintStart_toStartOf="@+id/tv_tide_label1"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tide_label1" />
+
+    <TextView
+        android:id="@+id/tv_tide_label3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text=" tide 3"
+        app:layout_constraintStart_toStartOf="@+id/tv_tide_label2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tide_label2" />
+
+    <TextView
+        android:id="@+id/tv_tide_label4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text=" tide 4"
+        app:layout_constraintStart_toStartOf="@+id/tv_tide_label3"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tide_label3" />
+
+    <TextView
+        android:id="@+id/tv_timelabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/purple_200"
+        android:text="TIME local"
+        app:layout_constraintBottom_toTopOf="@+id/tv_tide_label1"
+        app:layout_constraintStart_toEndOf="@+id/tv_tide_label1"
+        app:layout_constraintTop_toBottomOf="@+id/et_days_advance" />
+
+    <TextView
+        android:id="@+id/tv_heightlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="HEIGHT   m"
+        app:layout_constraintStart_toEndOf="@+id/tv_timelabel"
+        app:layout_constraintTop_toTopOf="@+id/tv_timelabel" />
+
+    <TextView
+        android:id="@+id/tv_daylabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="  DAY "
+        app:layout_constraintStart_toEndOf="@+id/tv_heightlabel"
+        app:layout_constraintTop_toTopOf="@+id/tv_heightlabel" />
+
+    <TextView
+        android:id="@+id/tv_tide1_day"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="thisday"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_tide_ht1"
+        app:layout_constraintEnd_toEndOf="@+id/tv_daylabel"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_daylabel"
+        app:layout_constraintTop_toTopOf="@+id/tv_tide_ht1" />
+
+    <TextView
+        android:id="@+id/tv_tide2_day"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="thisday"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_tide_ht2"
+        app:layout_constraintEnd_toEndOf="@+id/tv_tide1_day"
+        app:layout_constraintStart_toStartOf="@+id/tv_tide1_day"
+        app:layout_constraintTop_toTopOf="@+id/tv_tide_ht2" />
+
+    <TextView
+        android:id="@+id/tv_tide3_day"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="thisday"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_tide_ht3"
+        app:layout_constraintEnd_toEndOf="@+id/tv_tide2_day"
+        app:layout_constraintStart_toStartOf="@+id/tv_tide2_day"
+        app:layout_constraintTop_toTopOf="@+id/tv_tide_ht3" />
+
+    <TextView
+        android:id="@+id/tv_tide4_day"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="thisday"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_tide_ht4"
+        app:layout_constraintEnd_toEndOf="@+id/tv_tide3_day"
+        app:layout_constraintStart_toStartOf="@+id/tv_tide3_day"
+        app:layout_constraintTop_toTopOf="@+id/tv_tide_ht4" />
+
+    <TextView
+        android:id="@+id/tv_tidenow_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="  TIDE AT THIS TIME"
+        app:layout_constraintStart_toStartOf="@+id/tv_tide_label4"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tide_label4" />
+
+    <EditText
+        android:id="@+id/et_ht_now"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textAlignment="textEnd"
+        app:layout_constraintEnd_toEndOf="@+id/tv_tide_ht4"
+        app:layout_constraintStart_toStartOf="@+id/tv_tide_ht4"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tide_label4" />
+
+    <TextView
+        android:id="@+id/tv_rising"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="rise/fall"
+        app:layout_constraintStart_toStartOf="@+id/tv_tide4_day"
+        app:layout_constraintTop_toTopOf="@+id/tv_tidenow_label" />
+
+    <Spinner
+        android:id="@+id/port_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_ports_label"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_ports_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="Choose Port >>"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/port_spinner" />
+
+    <TextView
+        android:id="@+id/tv_choose_days"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Days ahead"
+        app:layout_constraintStart_toStartOf="@+id/tv_ports_label"
+        app:layout_constraintTop_toTopOf="@+id/et_days_advance" />
+
+    <EditText
+        android:id="@+id/et_days_advance"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        app:layout_constraintStart_toEndOf="@+id/tv_choose_days"
+        app:layout_constraintTop_toBottomOf="@+id/tv_ports_label" />
+
+    <EditText
+        android:id="@+id/et_test_box"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:fontFamily="cursive"
+        android:inputType="textMultiLine"
+        android:text="Test Box"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_rising"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_ht_now" />
+
+    <EditText
+        android:id="@+id/et_port_mirror"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="StHelier"
+        app:layout_constraintStart_toStartOf="@+id/et_test_box"
+        app:layout_constraintTop_toBottomOf="@+id/et_test_box" />
+
+    <TextView
+        android:id="@+id/tv_tide_ht1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="height 1"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/tv_heightlabel"
+        app:layout_constraintStart_toStartOf="@+id/tv_heightlabel"
+        app:layout_constraintTop_toTopOf="@+id/tv_tide_label1" />
+
+    <TextView
+        android:id="@+id/tv_tide_ht2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="height 2"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_tide_tim2"
+        app:layout_constraintEnd_toEndOf="@+id/tv_tide_ht1"
+        app:layout_constraintStart_toStartOf="@+id/tv_tide_ht1"
+        app:layout_constraintTop_toTopOf="@+id/tv_tide_label2" />
+
+    <TextView
+        android:id="@+id/tv_tide_tim2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="2nd tide time"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_tide_label2"
+        app:layout_constraintEnd_toEndOf="@+id/tv_tide_tim1"
+        app:layout_constraintStart_toStartOf="@+id/tv_tide_tim1"
+        app:layout_constraintTop_toTopOf="@+id/tv_tide_label2" />
+
+    <TextView
+        android:id="@+id/tv_tide_tim3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="3rd tide time"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_tide_label3"
+        app:layout_constraintEnd_toEndOf="@+id/tv_tide_tim2"
+        app:layout_constraintStart_toStartOf="@+id/tv_tide_tim2"
+        app:layout_constraintTop_toTopOf="@+id/tv_tide_label3"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tv_tide_tim4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="4th tide time"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_tide_label4"
+        app:layout_constraintEnd_toEndOf="@+id/tv_tide_tim3"
+        app:layout_constraintStart_toStartOf="@+id/tv_tide_tim3"
+        app:layout_constraintTop_toTopOf="@+id/tv_tide_label4" />
+
+    <TextView
+        android:id="@+id/tv_tide_ht3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="height 3"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_tide_tim3"
+        app:layout_constraintEnd_toEndOf="@+id/tv_tide_ht2"
+        app:layout_constraintStart_toStartOf="@+id/tv_tide_ht2"
+        app:layout_constraintTop_toTopOf="@+id/tv_tide_tim3" />
+
+    <TextView
+        android:id="@+id/tv_tide_ht4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="height 4"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_tide_tim4"
+        app:layout_constraintEnd_toEndOf="@+id/tv_tide_ht3"
+        app:layout_constraintStart_toStartOf="@+id/tv_tide_ht3"
+        app:layout_constraintTop_toTopOf="@+id/tv_tide_tim4" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="App by John Nugent based on work by David Flater"
+        app:layout_constraintBottom_toTopOf="@+id/btn_graph"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="57dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/port_spinner"
+        app:layout_constraintStart_toStartOf="@+id/port_spinner"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+
+    <TextView
+        android:id="@+id/tv_full_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Full Date"
+        app:layout_constraintStart_toEndOf="@+id/et_days_advance"
+        app:layout_constraintTop_toTopOf="@+id/tv_choose_days" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
